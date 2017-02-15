@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>洋码头源镜像站上线啦!</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <h3>YMT-OSM</h3>
+        <a href="/" title="ymatou open source mirror site"> Ymatou Open Source Mirror Site</a>
+    </div>
+
+<div id="navbar">
+    <ul>
+        <li><a href="/">Home</a></li>
+
+    </ul>
+</div>
+    <div id="main">
+        <div id="content">
+            <h1 class="file-list">文件列表</h1>
+
+            <table class="file-table">
+                <thead>
+                <tr>
+                    <th>Mirror</th>
+                    <th> Help</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr><td><a href="/centos">centos</a></td><td></td></tr>
+
+                <tr><td><a href="/epel">epel</a></td><td></td></tr>
+
+                </tbody>
+            </table>
+
+            <h1 class="file-list">使用帮助</h1>
+            curl http://10.11.251.8/centos_yum_ymt |sh <br>  <br>
+            <h1 class="file-list">脚本详细</h1>
+            #!/bin/sh<br>
+            sed -i '/10.11.251.8/d' /etc/hosts<br>
+            echo 10.11.251.8 mirrors.ops.ymatou.cn>> /etc/hosts<br>
+            rm -rf   /etc/yum.repos.d/CentOS-*<br>
+            curl -o  /etc/yum.repos.d/ymt.repo http://mirrors.ops.ymatou.cn/ymt.repo<br>
+        </div>
+        <div id="siderbar">
+
+
+
+    </ul>
+	<p style="margin-left:15px;">
+	</p>
+
+</br>
+</br>
+
+</div>
+
+    </div>
+<div class="clear"></div>
+<div id="footer">
+    <div class="about">
+    </div>
+</div>
+
+  </div>
+  </body>
+</html>

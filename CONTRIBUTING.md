@@ -1,0 +1,1 @@
+基于django djangorestframework django-celery 开发的运维发布系统后台，给前台发布系统提供接口调用
